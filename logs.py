@@ -13,5 +13,6 @@ class CustomTensorBoard(TensorBoard):
         pass
 
     def log(self, step, **stats):
-        self._write_logs(stats, step)
-        # just open a file and write the score each episode
+        # self._write_logs(stats, step)
+        # just open a file and write the score each epoch
+        print()

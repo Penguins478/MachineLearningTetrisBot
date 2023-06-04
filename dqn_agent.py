@@ -26,7 +26,7 @@ class DQNAgent:
         n_neurons (list(int)): List with the number of neurons in each inner layer
         activations (list): List with the activations used in each inner layer, as well as the output
         loss (obj): Loss function
-        optimizer (obj): Otimizer used
+        optimizer (obj): Optimizer used
         replay_start_size: Minimum size needed to train
     '''
 
