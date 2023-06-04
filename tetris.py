@@ -291,5 +291,11 @@ class Tetris:
         img = img.resize((Tetris.BOARD_WIDTH * 25, Tetris.BOARD_HEIGHT * 25))
         img = np.array(img)
         cv2.putText(img, str(self.score), (22, 22), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 1)
-        cv2.imshow('image', np.array(img))
+
+        kernel = np.array([[0, -1, 0],
+                           [-1, 5, -1],
+                           [0, -1, 0]])
+        sharpened = cv2.filter2D(img, -1, kernel)
+
+        cv2.imshow('image', np.array(sharpened))
         cv2.waitKey(1)
