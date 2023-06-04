@@ -297,5 +297,5 @@ class Tetris:
                            [0, -1, 0]])
         sharpened = cv2.filter2D(img, -1, kernel)
 
-        cv2.imshow('image', np.array(sharpened))
+        cv2.imshow('TetrisBot', np.array(sharpened))
         cv2.waitKey(1)

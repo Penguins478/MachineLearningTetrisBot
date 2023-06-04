@@ -76,7 +76,7 @@ def dqn():
             max_score = max(scores[-log_every:])
 
             # log.log(episode, avg_score=avg_score, min_score=min_score,
-                    # max_score=max_score)
+            #         max_score=max_score)
 
 
 if __name__ == "__main__":
