@@ -17,7 +17,7 @@ def dqn():
     discount = 0.95
     batch_size = 512
     epochs = 1
-    render_every = 50
+    render_every = 10 # adjust time for visualization
     log_every = 50
     replay_start_size = 2000
     train_every = 1
@@ -34,6 +34,8 @@ def dqn():
     # log = CustomTensorBoard(log_dir=log_dir)
 
     scores = []
+    max_score_run = 0
+    file = open("data.txt", "w")
 
     for episode in tqdm(range(episodes)):
         current_state = env.reset()
@@ -63,7 +65,15 @@ def dqn():
             current_state = next_states[best_action]
             steps += 1
 
-        scores.append(env.get_game_score())
+        game_score = env.get_game_score()
+        scores.append(game_score)
+
+        max_score_run = max(game_score, max_score_run)
+
+        print("\n@@@@@@@ Episode: " + str(episode) + " @@@@@@@\n")
+        print("Max Score: " + str(max_score_run) + "\n")
+
+        file.write(str(episode) + " " + str(game_score) + "\n")
 
         # Train
         if episode % train_every == 0:
