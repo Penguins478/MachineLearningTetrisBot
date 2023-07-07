@@ -17,7 +17,7 @@ def dqn():
     discount = 0.95
     batch_size = 512
     epochs = 1
-    render_every = 10 # adjust time for visualization
+    render_every = 1 # adjust time for visualization
     log_every = 50
     replay_start_size = 2000
     train_every = 1
