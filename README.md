@@ -8,3 +8,6 @@ After 1400 episodes and ~2 hours of training: <br></br>
 Graphical view of score progression: <br></br>
 ![image](https://github.com/Penguins478/MachineLearningTetrisBot/assets/19849726/671ef198-910b-4a65-b921-57fc07d5efd7)
 
+A quick view of the first 10 episodes (where it all began): <br></br>
+https://github.com/Penguins478/MachineLearningTetrisBot/assets/19849726/fcc578d0-42b7-4531-8b44-d55854c1a71d
+
